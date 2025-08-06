@@ -3,13 +3,24 @@
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
+            psels = <NRF_PSEL(SPIM_MOSI, 1, 12)>;
         };
     };
 
     spi3_sleep: spi3_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 6)>;
+            psels = <NRF_PSEL(SPIM_MOSI, 1, 12)>;
+            low-power-enable;
+        };
+    };
+    pwm0_default: pwm0_default {
+        group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 1, 13)>;
+        };
+    };
+    pwm0_sleep: pwm0_sleep {
+        group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 1, 13)>;
             low-power-enable;
         };
     };
@@ -41,6 +52,19 @@
             LED_COLOR_ID_BLUE
         >;
     };
+};
+
+zephyr_udc0: &usbd {
+    compatible = "nordic,nrf-usbd";
+    status = "okay";
+};
+
+nice_view_spi: &spi0 {
+    compatible = "nordic,nrf-spim";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+    cs-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
 };
 
 / {

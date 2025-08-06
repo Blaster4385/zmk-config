@@ -11,6 +11,9 @@ features:
   - encoder
   - underglow
   - studio
+outputs:
+  - usb
+  - ble
 siblings:
   - sofle_left
   - sofle_right
