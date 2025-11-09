@@ -1,17 +1,29 @@
 # Copyright (c) 2020 Ryan Cross
 # SPDX-License-Identifier: MIT
 
-if SHIELD_SOFLE_CUSTOM_LEFT
+if SHIELD_SOFLE_CUSTOM_DONGLE
 
 config ZMK_KEYBOARD_NAME
     default "Sofle Custom"
 
+config ZMK_SPLIT
+    default y
+
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-endif # SHIELD_SOFLE_CUSTOM_LEFT
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
 
-if SHIELD_SOFLE_CUSTOM_LEFT || SHIELD_SOFLE_CUSTOM_RIGHT
+config BT_MAX_CONN
+    default 7
+
+config BT_MAX_PAIRED
+    default 7
+
+endif # SHIELD_SOFLE_CUSTOM_DONGLE
+
+if SHIELD_SOFLE_CUSTOM_LEFT || SHIELD_SOFLE_CUSTOM_RIGHT || SHIELD_SOFLE_CUSTOM_DONGLE
 
 config ZMK_SPLIT
     default y

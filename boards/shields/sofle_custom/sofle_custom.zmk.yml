@@ -13,5 +13,6 @@ outputs:
   - usb
   - ble
 siblings:
+  - sofle_custom_dongle
   - sofle_custom_left
   - sofle_custom_right
