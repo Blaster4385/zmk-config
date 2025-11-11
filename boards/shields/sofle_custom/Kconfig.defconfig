@@ -9,7 +9,7 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
-endif
+endif # SHIELD_SOFLE_CUSTOM_LEFT
 
 if SHIELD_SOFLE_CUSTOM_LEFT || SHIELD_SOFLE_CUSTOM_RIGHT
 
@@ -26,7 +26,7 @@ config SSD1306
 
 endif # ZMK_DISPLAY
 
-if LVGL
+if SSD1306
 
 config LV_Z_VDB_SIZE
     default 64
@@ -41,12 +41,23 @@ choice LV_COLOR_DEPTH
     default LV_COLOR_DEPTH_1
 endchoice
 
-endif # LVGL
+endif # SSD1306
 
 if ZMK_RGB_UNDERGLOW
 
 config WS2812_STRIP
     default y
-endif
 
-endif
+endif # ZMK_RGB_UNDERGLOW
+
+if ZMK_BACKLIGHT
+
+config PWM
+    default y
+
+config LED_PWM
+    default y
+
+endif # ZMK_BACKLIGHT
+
+endif # SHIELD_SOFLE_CUSTOM_LEFT || SHIELD_SOFLE_CUSTOM_RIGHT
