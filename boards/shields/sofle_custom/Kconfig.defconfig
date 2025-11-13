@@ -21,9 +21,26 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 7
 
+if ZMK_RGB_UNDERGLOW
+
+config WS2812_STRIP
+    default y
+
+endif # ZMK_RGB_UNDERGLOW
+
+if ZMK_BACKLIGHT
+
+config PWM
+    default y
+
+config LED_PWM
+    default y
+
+endif # ZMK_BACKLIGHT
+
 endif # SHIELD_SOFLE_CUSTOM_DONGLE
 
-if SHIELD_SOFLE_CUSTOM_LEFT || SHIELD_SOFLE_CUSTOM_RIGHT || SHIELD_SOFLE_CUSTOM_DONGLE
+if SHIELD_SOFLE_CUSTOM_LEFT || SHIELD_SOFLE_CUSTOM_RIGHT
 
 config ZMK_SPLIT
     default y
