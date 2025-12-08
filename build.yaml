@@ -27,7 +27,7 @@ include:
     artifact-name: sofle_custom_right
   - board: seeeduino_xiao_ble
     shield: sofle_custom_dongle dongle_screen
-    snippet: studio-rpc-usb-uart
+    snippet: studio-rpc-usb-uart zmk-usb-logging
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: sofle_custom_dongle
   - board: nice_nano_v2
