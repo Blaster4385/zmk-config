@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/M165437
     - name: machetie
       url-base: https://github.com/machetie
+    - name: carrefinho
+      url-base: https://github.com/carrefinho  
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -17,8 +19,8 @@ manifest:
     - name: nice-view-gem
       remote: m165437
       revision: main
-    - name: zmk-dongle-screen
-      remote: machetie
-      revision: main
+    - name: prospector-zmk-module
+      remote: carrefinho
+      revision: feat/new-status-screens
   self:
     path: config
