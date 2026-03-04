@@ -19,18 +19,18 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: sofle_custom_left nice_view_adapter nice_view_gem
     artifact-name: sofle_custom_left
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: sofle_custom_right nice_view_adapter nice_view_gem
     artifact-name: sofle_custom_right
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: sofle_custom_dongle dongle_screen
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: sofle_custom_dongle
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: settings_reset
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: settings_reset

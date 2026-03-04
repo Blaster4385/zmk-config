@@ -78,6 +78,10 @@ zephyr_udc0: &usbd {
     status = "okay";
 };
 
+&reg0 {
+    status = "okay";
+};
+
 / {
     chosen {
         zmk,underglow = &led_strip;

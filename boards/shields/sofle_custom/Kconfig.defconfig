@@ -21,12 +21,7 @@ config BT_MAX_CONN
 config BT_MAX_PAIRED
     default 7
 
-if ZMK_RGB_UNDERGLOW
 
-config WS2812_STRIP
-    default y
-
-endif # ZMK_RGB_UNDERGLOW
 
 if ZMK_BACKLIGHT
 
@@ -72,12 +67,7 @@ endchoice
 
 endif # SSD1306
 
-if ZMK_RGB_UNDERGLOW
 
-config WS2812_STRIP
-    default y
-
-endif # ZMK_RGB_UNDERGLOW
 
 if ZMK_BACKLIGHT
 
