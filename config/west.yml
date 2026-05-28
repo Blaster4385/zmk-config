@@ -2,6 +2,8 @@ manifest:
   defaults:
     revision: main
   remotes:
+    - name: blaster4385
+      url-base: https://github.com/Blaster4385
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: m165437
@@ -14,7 +16,7 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: blaster4385
       import: app/west.yml
     - name: nice-view-gem
       remote: m165437
